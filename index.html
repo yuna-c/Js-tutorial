@@ -6,102 +6,10 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Document</title>
   <link rel='stylesheet' href='css/style.css'>
-
 </head>
 
 <body>
 </body>
-<script>
-  /*
-     변수 : 자주쓰는 값을 담아서 재활용하기 위한 임시 공간
-     let : 자주 바뀔만한 값은 let 방식으로 만든 변수에 담는다
-     const : 바뀌면 안되는 중요한 값은 const 방식으로 만든 변수에 담는다
-
-     let a = 'test'; //a라는 변수에 'test'라는 문자를 저장 (a변수는 let 선언방식이라 추후 덮어쓰기 가능)
-     const myName = '홍길동'; //myName이라느 변수에 '홍길동'  이름 저장 (myName const 선언방식이라 덮어쓰기 불가능)
-     ---------------------------
-     문자열 vs 숫자
-     문자: 따옴표로 감싸서 표현
-     숫자: 숫자만 입력
-     
-     강제로 숫자나 변수가 문자화되는 경우: 따옴표로 감싸는 순간
-     ----------------------------
-     연산자 : 특정 값을 도출하기 위한 연산식별자 (산술연산자, 비교연산자, 대입연산자)
-     :산술연산자는 숫자값 연산
-     :비교연산자는 복수개의 값을 비교해서 true, false 반환
-     :대입연산자는 우항의 연산된 결과값을 좌항에 대입
-     :복합대입연산자 : 대입연산자와 산술연산자가 결합된 형태
-     -----------------------------
-     조건문 (조건식의 결과에 따라 분기처리)
-     :비교연산자를 활용해서 반환되는 true, false값에 따라의 코드의 분기처리
-     if(조건식1){
-       만약 조건식1이 true면 해당 코드블록을 실행하고 조건문 중지
-       조건식1이 false면 해당 코드블록 무시하고 다음 조건식 넘어감
-     }
-     else if(조건식2){
-       만약 조건식2가 true면 해당 코드블록을 실행하고 조건문 중지
-       조건식2가 false면 해당 코드블록 무시하고 다음 조건식 넘어감
-     }
-     else {
-       위의 조건식들이 모두 false면 어쨋든 조건식 종료를 위해서 
-       해당 구문의 코드블록 실행하고 조건문 종료
-     }
-
-     실제 개발시 제일 많이 활용된 패턴이고
-     :조건이 여러있을때 해당 구문을 반복처리하기 위함
-     :만약 아래 조건식에 부합되는 경우가 없으면 아무코드도 실행되지 않음
-     if(조건식1){실행할 코드블록}
-     if(조건식2){실행할 코드블록}
-     if(조건식3){실행할 코드블록}
-
-     //특정이 조건일떄 딱 한줄의 코드만 실행되면 되고
-     //특정이 조건이 아니면 아무일도 발생시키지 않을때 아래와 같은 표현식 많이씀
-     if(조건식) 실행할 코드한줄;
-   */
-  /*
-    //현재 시간값 반환
-    const hour = new Date().getHours();
-    console.log(hour)
-  
-    //현재 시간이 5보다 같거나 크고 그와동시에 12보다 작을때 true
-    console.log(hour >= 5 && hour < 12)
-  
-    //현재시간이 5보가 같거나 크거나 혹은 12보다 작을떄 true
-    console.log(hour >= 5 && hour < 12)
-  
-    //body요소의 스타일값중 배경색의 해당하는 값을 aqua로 대입
-    document.body.style.backgroundColor = 'aqua';
-  
-    //미션 
-    //- 현재시간이 5~11사이면 body배경색상 orange변경
-    //- 현재시간이 11~15사이면 body배경색상 lightblue변경
-    //- 현재시간이 15~19사이면 body배경색상 pink변경
-    //- 현재시간이 19보다 크고 5보다 작으면 black으로 변경
-    */
-  /*
-  if (hour >= 5 && hour < 12) {
-    document.body.style.backgroundColor = 'orange';
-  }
-  else if (hour >= 12 && hour < 16) {
-    document.body.style.backgroundColor = 'lightblue';
-  }
-  else if (hour >= 15 && hour < 20) {
-    document.body.style.backgroundColor = 'pink';
-  }
-  else {
-    document.body.style.backgroundColor = 'black';
-  }
-  */
-  /*
-    if (hour >= 5 && hour < 12) document.body.style.backgroundColor = 'orange';
-    if (hour >= 12 && hour < 15) document.body.style.backgroundColor = 'lightblue';
-    if (hour >= 15 && hour < 20) document.body.style.backgroundColor = 'pink';
-    if (hour >= 20 || hour < 5) document.body.style.backgroundColor = 'black';
-  */
-
-
-
-</script>
 <script src="js/1108.js"></script>
 
 </html>
