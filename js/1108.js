@@ -136,10 +136,19 @@ document.body.style.backgroundColor = 'pink';
 
 // else {document.body.style.backgroundColor = "black";}
 
+//미션
+// - 현재 시간이 5~11시 사이면 body 배경색 orange 변경
+// - 현재 시간이 11~15시 사이면 body lightblue
+// - 현재 시간이 15~19시 사이면 body pink
+// - 현재 시간이 19보다 크고 5보다 작으면 사이면 body black
 if (hour >= 5 && hour < 12) document.body.style.backgroundColor = 'rgb(234, 205, 205)';
-if (hour >= 12 && hour < 15) document.body.style.backgroundColor = 'rosybrown';
+//h가 5보다 크거나 같고, 12보다 작으면
+if (hour >= 11 && hour < 16) document.body.style.backgroundColor = 'rosybrown';
+//h가 11보다 크거나 같고, 15보다 작으면
 if (hour >= 15 && hour < 20) document.body.style.backgroundColor = 'rgb(167, 86, 86)';
-if (hour >= 15 || hour < 5) document.body.style.backgroundColor = 'rgb(201, 140, 140)';
+//h가 15보다 크거나 같고, 19보다 작으면
+if (hour >= 19 || hour < 5) document.body.style.backgroundColor = 'rgb(201, 140, 140)';
+//h가 19보다 크거나 5보다 작으면 or
 
 /*
 배열 : 같은 성격의 여러개의 값들을 그룹화 할때 쓰는 자료형
