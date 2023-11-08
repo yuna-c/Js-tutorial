@@ -168,3 +168,23 @@ console.log(colors[3]);
 3. 변수명 대소문자 구분
 4. 변수명 특수문자 불가 (_,$ 가능)
 */
+
+/*
+객체(Object)
+: 여러개의 값을 그룹화 (자료구조가 복잡할 때)
+*/
+
+const iphone1 = {
+	price: 1000, //프로포티
+	color: 'white', // key : value
+	isSale: false,
+};
+
+// 객체 값 뽑을 때
+console.log(iphone1.price); // 객체명. 프로포티
+console.log(iphone1['color']);
+
+console.log(iphone1);
+
+iphone1.version = 'pro';
+console.log(iphone1); //게터세터 객체 추가 못하게 하는 거
