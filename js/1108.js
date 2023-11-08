@@ -110,7 +110,7 @@ console.log(hour >= 5 && hour < 12); //  hour이 5보다 같거나 크고 hour�
 console.log(hour >= 5 || hour < 12);
 
 // 바디 요소의 스타일 값 중 배경색의 해당하는 값을 aqua로 대입
-document.body.style.backgroundColor = 'ㅔㅑㅜㅏ';
+document.body.style.backgroundColor = 'pink';
 
 //미션
 // - 현재 시간이 5~11시 사이면 body 배경색 orange 변경
