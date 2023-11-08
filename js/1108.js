@@ -8,7 +8,7 @@
     const ex) db주소, 접속 비밀번호, 개인정보, 값이 정확한 거 (숫자,문자,boolean)   
     */
 const a = 'test';
-let myName = '유나';
+let myName = '나나';
 console.log(a);
 console.log(myName);
 
