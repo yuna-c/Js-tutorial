@@ -44,3 +44,27 @@ console.log(4 == 2);
 console.log(4 !== 4);
 // == 값만 비교,  === 값, 자료형 비교
 // != 값이 달라야 true
+
+// let num; //변수 선언(메모리 할당)
+// num = 1; //변수에 값 할당(대입 연산자)
+let num = 1; //변수 초기화 (메모리 할당과 동시에 값 대입)
+// num = num + 1; // 자기 자신 값에 1을 더한 값을 다시 자기 자신에 재할당
+// console.log(num);
+
+// 복합 대입 연산자
+// num = num + 1;
+// num += 1;
+// num++;
+// num--;
+console.log(num);
+
+// let num2 = 2;
+// let num2 = num2 + 1;
+
+console.log(true && true); // &&(and)연산자는 복수개의 값이 모두 true여야 true로 인지
+console.log(true && false);
+console.log(true || true); // ||(or)연산자는 하나만 true면 true로 인지
+console.log(true || false);
+/*
+
+*/
