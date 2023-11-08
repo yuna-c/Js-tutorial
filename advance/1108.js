@@ -25,6 +25,9 @@ undifind vs null
 : ES6 이후로 객체의 property key값을 변수로 치환 가능해짐
 : 객체의 property key를 대괄호로 묶으면 변수로 활용가능
 : react 반복기능 편하게 사용하기 위해서
+
+자바스크립트 데이터형의 자료형 확인하는 법
+typeof값 : 해당 값의 자료형이 문자값으로 반환
 */
 
 let test;
@@ -36,16 +39,30 @@ console.log(youtubeData);
 youtube = '추후에 담길 유튜브 데이터 DB';
 // 유튜브 데이터에 추후에 담길 유튜브 데이터
 
-let name = 'abc';
+let name1 = 'abc';
 let age = '가나다';
 
-const student = {
-	[name]: 'nana', //키값 = 문자열 (변수)
+const stud = {
+	[name1]: 'nana', //키값 = 문자열 (변수)
 	[age]: '20',
 };
 
-console.log(student.abc);
-console.log(student.가나다);
+console.log(stud.abc);
+console.log(stud.가나다);
 // console.log(student.age); 변수로 핟당해서 키값 바꾸면 그 전 값 쥬금
-console.log(Object.values(student));
-console.log(Object.keys(student));
+console.log(Object.values(stud));
+console.log(Object.keys(stud));
+
+// 자료형확인
+let txt = 'hello';
+let num = 3;
+let isFemale = false;
+let error;
+let colors = ['red', 'green', 'blue'];
+let student = {
+	name: 'ddd',
+	age: 20,
+	isFemale: false,
+};
+let data = null;
+console.log(typeof data);
