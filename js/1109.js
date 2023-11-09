@@ -248,3 +248,18 @@ console.log('multifly1', multiply1(2, 3));
 // 굳이 리턴할 필요가 없는 함수라도 코드의 간결화를 위해 축약하는 경우도 있음
 const introduce3 = (name) => name && console.log(name + '님 하이');
 introduce3('홍길동');
+
+// 1. 함수에 인수 전달하고 내부의 값 리턴으로 내보내기
+function plusTo(num1, num2) {
+	return num1 + num2;
+}
+const result4 = plusTo(2, 3);
+console.log(result4);
+
+//2.함수안쪽에서 조건문과 return을 활용해 함수 강제종료
+function introduce(name) {
+	if (!name) return;
+	console.log(name + '님 반갑습니다.');
+}
+introduce('메가커피');
+introduce();
