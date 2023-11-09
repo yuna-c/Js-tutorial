@@ -179,8 +179,10 @@ function test3(name) {
 	let defaultName = '아무개'; //지역변수
 
 	// &&연산자 뒤에 대입연산자가 들어올 수 없으므로 대입연산구문을 괄호처리해서 그룹화)
-	!name && (name = defaultName);
-	return console.log(name + '님 반갑습니다❤');
+	!name && (name = defaultName); // 네임값이 없을때 지역변수로 치환해서 처리
+	// if (name) console.log(name + '님 안녕하세요❤');
+	return console.log(name + '❤' + '님 반갑습니다');
 }
 test3();
+
 /*--------------- 선언적 함수 ----------------*/
