@@ -89,3 +89,23 @@ const result3 = returnPlus(6, 7);
 
 console.log(returnPlus(2, 3) + returnPlus(4, 5) + returnPlus(6, 7));
 console.log(result1 + result2 + result3);
+
+/* return 의 다른쓰임 */
+// 엄청 로직이 무거운 함수
+function heavyWork(data) {
+	/*
+	if (data !== undefined) {
+		console.log(data);
+		console.log(data);
+		console.log(data);
+	}
+  */
+
+	// 에러 상황이 발생되서 불필요하게 코드를 실행할 필요가 없을 때
+	// return을 이용해서 강제 함수 실행 중지
+	if (data === undefined) return; //특정 조건에 따라 무시하거나 종료하거나
+	console.log(data);
+	console.log(data);
+	console.log(data);
+}
+heavyWork('add');
