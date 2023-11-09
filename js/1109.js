@@ -301,9 +301,21 @@ weather.forEach(function (data, index, arr) {
 // 배열값을 인수로 받아서 누구님 반갑습니다 라는 콘솔문을 자동을 반복해준는 함수
 const names = ['길동이', '판섭이', '영철이'];
 
-function intro(arr) {
+function introduce4(arr) {
 	arr.forEach(function (data) {
-		console.log(data + '어서오고');
+		console.log(data + ' 어서오고');
 	});
 }
-intro(names);
+introduce4(names);
+console.log('---------------------------------');
+
+const classA = ['아이유', '수지', '아이린'];
+const classB = ['송혜교', '김태희', '강감찬'];
+
+function intro(array) {
+	array.forEach(function (data, index) {
+		console.log(data + ' hi~' + ' 넌 ' + index + '번째로 왔어');
+	});
+}
+intro(classA);
+intro(classB);
