@@ -131,3 +131,32 @@ heavyWork(' ');
 
 // 리턴값이 없을 때 undefined
 //console.log(heavyWork());
+
+/* 이름값이 인수로 전달되면 인사말 출력, 이름값 미 전달시 경고문(조건문,함수) */
+function introduce(name) {
+	/*
+	if (!name) {
+		console.log('이름을 입력해 주세요');
+	} else {
+		console.log(name + '님 안녕하세요');
+	}
+	if (name) {
+		console.log(name + '님 안녕하세요');
+	} else {
+		console.log('이름을 인수로 입력해 주세요');
+	}
+  */
+
+	// 삼항연산자(if,else문을 3개의 항을 이용해서 간소화한 형태)
+	// 삼항연산자를 쓰는 경우는 조건식의 true,false값에 따라 실행할 구문의 한줄의 간단한 구문일 때
+	// 리액트 개발에서 JSX라는 가상돔 출력구문 안쪽에는 조건문을 3항 연산자만 사용가능
+	// 조건식 ? 조건식이 true일 떄 실행할 구문 : 조건식이 false일 때 실행할 구문
+	return name ? console.log(name + '님 안녕하세요') : console.log('이름을 인수로 입력해 주세요');
+}
+introduce();
+
+/* 삼항 연산자로 고도화시킨 함수 */
+function introduce2(name) {
+	name ? console.log(name + '님 안녕하세요❤') : console.log('이름을 인수로 입력해 주세요');
+}
+introduce2('나나');
