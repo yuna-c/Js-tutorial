@@ -127,7 +127,7 @@ function heavyWork(data) {
 }
 
 // false로 인식되는 값인 (0,'', undefined, null)이 인수로 전달되면 함수 실행 종료됨
-heavyWork(' ');
+heavyWork('');
 
 // 리턴값이 없을 때 undefined
 //console.log(heavyWork());
@@ -174,7 +174,7 @@ function test2(name) {
 }
 test2();
 
-//
+test3('김통깨'); // hoisting
 function test3(name) {
 	let defaultName = '아무개'; //지역변수
 
@@ -185,4 +185,45 @@ function test3(name) {
 }
 test3();
 
-/*--------------- 선언적 함수 ----------------*/
+/*
+  함수의 종류 
+  - 익명함수 : 함수에 이름이 없는 형태 (변수에 익명함수를 대입해서 주로 호출)
+  - 기명함수 : 함수에 이름이 있는 형태(funtion 키워드로 선언하고 호출)
+
+  - 선언적함수 
+  : function 키워드로 이름을 붙여서 선언하는 형태           
+  : 함수의 호출 위치가 자유로움(함수 선언 이전에 호출 가능, hoisting)
+  : only js
+
+  - 선언적 함수가 선언되기 전에 호출 가능한 이유
+  : 자바스크립트 파일을 실행하기 전에 판단 단계에서 미리 변수와 선언적 함수를 우선적으로 해석하기 때문에 호출 가능
+
+  - 대입형함수 
+  : 일반 변수에 일반함수를 대입하는 형태
+  : 함수가 변수에 대입되는 형태이기 때문에 함수가 대입된 이후에만 호출 가능
+  : 정상적인 경우 
+  : react
+
+  - 즉시실행함수 : 익명함수 형태로 함수를 정의하자마자 자기자신을 즉시 호출하는 함수형태 
+
+  ES6
+  화살표함수 
+  - 익명함수를 간소화처리(내부적으로 this 객체를 생성하지 않는 함수)
+*/
+
+// 선언적함수(호출위치 자유로움), 기명함수
+console.log(plus(3, 4));
+// undefined 떠야 하는데,
+function plus(num1, num2) {
+	return num1 + num2;
+}
+
+// 대입형함수(Reference error), 익명함수
+// console.log(minus);
+let minus = function (num1, num2) {
+	return num1 - num2;
+};
+console.log(minus(5, 3));
+
+// 우선적 확인(스크립트가 런타임 실행 전에) : 변수, 선언적 함수
+// 대입형 함수
