@@ -38,6 +38,18 @@ inform('홍길동');
 // typeof 변수값 : 자료형을 문자로 변환
 // 미션2 : 만약 파라미터로 전달되는 두개의 값중에 2개의 값중 하나라도 숫자가 아니면 더한 값이 아닌 숫자만 입력하세요라는 에러문구 출력 (typeof, if 활용)
 
+/* 미션1 */
+function plusNum(num1, num2) {
+	//코드블록 : 지역변수
+	const result = num1 + num2;
+	return result;
+}
+// console.log(result); error (재활용 안댐)
+// if 2,3 더한값과 4,5를 더한 값을 다시 더해주세요 하면 일회성이니까 호출되고 나서 없어짐
+const returned = plusNum(4, 6) + plusNum(4, 3);
+console.log(returned);
+
+/* 미션2 */
 function plus(num1, num2) {
 	//파라미터, 매개변수
 	const plus = num1 + num2;
@@ -61,28 +73,19 @@ function plus(num1, num2) {
 // console.log(plus(2, 3)); undefined
 plus(2, 3);
 
-// return 내가해봄
-function plus2(num1, num2) {
-	//코드블록 : 지역변수
-	const result = num1 + num2;
-	return result;
-}
-// console.log(result); error (재활용 안댐)
-// if 2,3 더한값과 4,5를 더한 값을 다시 더해주세요 하면 일회성이니까 호출되고 나서 없어짐
-const returned = plus2(4, 6) + plus2(4, 3);
-console.log(returned);
-
-// return 수업
+/* return */
 function returnPlus(num1, num2) {
 	const result = num1 + num2;
 	return result;
 }
 
+//리턴값이 있는 함수 호출
 console.log(returnPlus(2, 3));
-// if 2,3 더한값과 4,5를 더한 값을 다시 더해주세요
 
+// if 2,3 더한값과 4,5 6,7를 더한 값을 다시 더해주세요
 const result1 = returnPlus(2, 3);
 const result2 = returnPlus(4, 5);
+const result3 = returnPlus(6, 7);
 
-console.log(returnPlus(2, 3) + returnPlus(4, 5));
-console.log(result1 + result2);
+console.log(returnPlus(2, 3) + returnPlus(4, 5) + returnPlus(6, 7));
+console.log(result1 + result2 + result3);
