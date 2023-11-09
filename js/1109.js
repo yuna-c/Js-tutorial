@@ -171,6 +171,16 @@ test('곤란해');
 /* &&연산자 */
 function test2(name) {
 	name && console.log(name + '님 반갑습니다❤'); //else문이 필요 없는 연산자
-	return;
 }
 test2();
+
+//
+function test3(name) {
+	let defaultName = '아무개'; //지역변수
+
+	// &&연산자 뒤에 대입연산자가 들어올 수 없으므로 대입연산구문을 괄호처리해서 그룹화)
+	!name && (name = defaultName);
+	return console.log(name + '님 반갑습니다❤');
+}
+test3();
+/*--------------- 선언적 함수 ----------------*/
