@@ -217,13 +217,34 @@ console.log(plus(3, 4));
 function plus(num1, num2) {
 	return num1 + num2;
 }
+console.log('plus', plus(3, 4));
 
-// 대입형함수(Reference error), 익명함수
+// 대입형함수(대입 이후에만 호출 가능, Reference error), 익명함수
 // console.log(minus);
 let minus = function (num1, num2) {
 	return num1 - num2;
 };
-console.log(minus(5, 3));
+console.log('minus', minus(5, 3));
 
-// 우선적 확인(스크립트가 런타임 실행 전에) : 변수, 선언적 함수
-// 대입형 함수
+/* 
+  우선적 확인(스크립트가 런타임 실행 전에) : 변수, 선언적 함수
+  대입형 함수 
+*/
+
+// 화살표 함수 (대입형 함수를 축약한 형태)
+const multiply = (num1, num2) => {
+	return num1 * num2;
+};
+const result = multiply(2, 3);
+console.log('multifly', result);
+
+// 화살표함수에서 return문 생략한 형태
+// 화살표 뒤에 중괄호 return문 없이 특정 값을 도출하는 연산식이 있으면 해당 값 자체가 자동 리턴되는 형태
+// 위의 리턴 함수와 동일한 구문
+const multiply1 = (num1, num2) => num1 * num2;
+console.log('화살표함수 리턴 축약문');
+console.log('multifly1', multiply1(2, 3));
+
+// 굳이 리턴할 필요가 없는 함수라도 코드의 간결화를 위해 축약하는 경우도 있음
+const introduce3 = (name) => name && console.log(name + '님 하이');
+introduce3('홍길동');
