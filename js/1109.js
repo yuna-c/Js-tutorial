@@ -24,6 +24,18 @@
   : 함수 내부에서 return문을 만나면 그 즉시 함수 실행 종료
   : 함수 내부 로직에서 error가 발생될만한 상황이면 불필요하게 다음 코드들을 실행하지 않고 해당 함수를 강제 종료할 때
 
+  true, false는 아니지만 true, false로 인지되는 값들
+
+  true로 인지되는 값들 
+  : 빈 문자가 아닌 문자값(스페이스바 빈칸도 문자로 인지함)
+  : 0이 아닌 숫자값
+
+  false로 인지되는 값들
+  : 빈 문자값
+  : 숫자 0
+  : undefined
+  : null
+
 */
 
 // 함수의 정의 (name이라는 [매개변수]가 연결되어 있는 함수)
@@ -103,9 +115,17 @@ function heavyWork(data) {
 
 	// 에러 상황이 발생되서 불필요하게 코드를 실행할 필요가 없을 때
 	// return을 이용해서 강제 함수 실행 중지
-	if (data === undefined) return; //특정 조건에 따라 무시하거나 종료하거나
+
+	//특정 조건에 따라 무시하거나 종료하거나
+	//if (data === undefined) return;
+	if (!data) return; // 데이터값이 false, 없을때
 	console.log(data);
 	console.log(data);
 	console.log(data);
+
+	// 재이벤트 발생 금지, 활성화 버튼 비활성화시 사용, 함수 끝날때 까지 재클릭 금지
 }
-heavyWork('add');
+heavyWork(' ');
+
+// 리턴값이 없을 때 undefined
+//console.log(heavyWork());
