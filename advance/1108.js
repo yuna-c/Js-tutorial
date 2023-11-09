@@ -121,7 +121,7 @@ colors[0] = '가가';
 let abc = null; // 초기화
 let num = 0; // 변수의 값이 숫자일 때 0으로 초기화 하면 좋음
 let txt = ''; // 문자열일 때
-let isTrue = true; // 논리형
+let isTrue = true; // Boolean
 
 // 고차함수 ?
 abc = 'test';
