@@ -263,3 +263,47 @@ function introduce(name) {
 }
 introduce('메가커피');
 introduce();
+
+/*
+  반복문 - 여러번 반복되는 특정 코드를 자동 반복처리
+  내장함수 - 이미 시스템에 정의되어 있는 함수
+  for(자바스크립트 기본내장함수), forEach, map(배열전용 내장함수)
+
+  forEach(ES5) map(ES6): 사본유무
+*/
+
+// for문 패턴 : for(초기값; 반복범위; 반복방식){}
+for (let i = 1; i <= 100; i++) {
+	console.log('eeee');
+}
+
+const weather = ['sunny', 'cloud', 'rain', 'snow', 'any']; //참조형자료
+/*
+// console.log(colors[1]);
+for (let i = 0; i < weather.length; i++) {
+	console.log(weather[i]);
+}
+*/
+
+// forEach로 반복처리
+// forEach안쪽에 함수를 인수로 전달
+// forEach안쪽에 인수로 전달되는 매개변수로는 다음의 값들이 자동 전달됨
+// 첫번째 인수(현재 반복도는 배열의 각 데이터 값)
+// 두번재 인수(현재 반복도는 순번)
+// 세번째 인수 (반복도는 원본 배열 값 전체)
+weather.forEach(function (data, index, arr) {
+	// 반복또는 데이터, 순서, 원본배열값
+	console.log('data', data);
+	console.log('index', index);
+	//console.log('arr', arr);
+});
+
+// 배열값을 인수로 받아서 누구님 반갑습니다 라는 콘솔문을 자동을 반복해준는 함수
+const names = ['길동이', '판섭이', '영철이'];
+
+function intro(arr) {
+	arr.forEach(function (data) {
+		console.log(data + '어서오고');
+	});
+}
+intro(names);
