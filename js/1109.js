@@ -125,6 +125,8 @@ function heavyWork(data) {
 
 	// 재이벤트 발생 금지, 활성화 버튼 비활성화시 사용, 함수 끝날때 까지 재클릭 금지
 }
+
+// false로 인식되는 값인 (0,'', undefined, null)이 인수로 전달되면 함수 실행 종료됨
 heavyWork(' ');
 
 // 리턴값이 없을 때 undefined
