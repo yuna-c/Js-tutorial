@@ -160,3 +160,17 @@ function introduce2(name) {
 	name ? console.log(name + '님 안녕하세요❤') : console.log('이름을 인수로 입력해 주세요');
 }
 introduce2('나나');
+
+// 인수값이 있을때만 실행되는 함수 작성시
+function test(name) {
+	if (name) console.log(name + '님 안녕하세요❤');
+	return;
+}
+test('곤란해');
+
+/* &&연산자 */
+function test2(name) {
+	name && console.log(name + '님 반갑습니다❤'); //else문이 필요 없는 연산자
+	return;
+}
+test2();
