@@ -59,3 +59,61 @@ newColors3.push('white');
 console.log('colors', colors);
 console.log('newColors3', newColors3);
 console.log('newColors3_copy', newColors3_copy);
+
+/*
+전개연산자 (spred Operator)
+- 참조형 자료(객체,배열)를 완전복사 (Deep Copy, 불변성 유지됨)
+- Heap memory에 있는 값을 물리적으로 복사
+*/
+const interets = ['game', 'movie', 'cartoon']; //객체 참조형 자료
+console.log(...interets);
+
+const newInterests = [...interets]; //배열복사
+newInterests[2] = 'reading';
+
+console.log('interets', interets);
+console.log('newInterets', newInterests);
+
+//객체 복사
+const obj = {
+	color: 'white',
+	today: 1110,
+	character: '춘식이',
+	weather: 'cold',
+	mood: 'not bad',
+};
+
+const newObj = { ...obj };
+newObj.color = 'green';
+newObj.mood = 'sad';
+
+console.log('obj', obj);
+console.log('newObj', newObj);
+
+// 객체 합치는 방법
+const student1 = {
+	//작년 회원가입 정보
+	name: 'Micheal',
+	age: 20,
+};
+const extraInfo = {
+	//올해 회원가입 정보
+	name: 'Micheal',
+	age: 21,
+	hobby: 'game',
+};
+
+//작년 회원가입 정보값 유지, 올해 회원가입 정보 업데이트
+//전개 연산자 이용하면 원본유지하면서 기존 2개의 객체 값을 합칠 때 유용
+//함수의 인수로 객체로 들어갈 수 있오
+const newStudent = { ...student1, ...extraInfo };
+console.log('student1', student1);
+console.log('extraInfo', extraInfo);
+console.log('newStudent', newStudent);
+console.log('-------------------------------------');
+
+newStudent.name = 'andy';
+newStudent.hobby = 'sleep';
+console.log('student1', student1);
+console.log('extraInfo', extraInfo);
+console.log('newStudent', newStudent);
