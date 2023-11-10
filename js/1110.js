@@ -117,3 +117,38 @@ newStudent.hobby = 'sleep';
 console.log('student1', student1);
 console.log('extraInfo', extraInfo);
 console.log('newStudent', newStudent);
+
+const aa = {
+	aa: 'aa',
+	bb: 'bb',
+};
+const bb = {
+	aa: 'ab',
+	bb: 'bb',
+	cc: 'cc',
+};
+const aabb = { ...aa, ...bb };
+console.log('aa', aa, 'bb', bb);
+console.log('aabb', aabb);
+
+aabb.gg = 'gg';
+console.log('aabb', aabb);
+aabb[0] = '11';
+console.log('aabb', aabb);
+
+/*
+문자열에 변수를 쉽게 삽입하는 법 'Templat litenal'
+*/
+const name = '김또깡';
+const age = 20;
+const address = '서울';
+
+intro(name, age, address);
+function intro(name, age, address) {
+	console.log('제 이름은 ' + name + '이고, 나이는 ' + age + '살이며, 사는 곳은 ' + address + '입니다.');
+}
+
+intro2('김낑깡', 30, '도쿄');
+function intro2(name, age, address) {
+	console.log(`제 이름은 ${name}이고, 나이는 ${age}살이며, 사는 곳은 ${address}입니다.`);
+}
