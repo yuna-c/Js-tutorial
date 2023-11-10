@@ -152,3 +152,30 @@ intro2('김낑깡', 30, '도쿄');
 function intro2(name, age, address) {
 	console.log(`제 이름은 ${name}이고, 나이는 ${age}살이며, 사는 곳은 ${address}입니다.`);
 }
+/*
+const colors = ['red', 'green', 'blue'];
+const color1 = colors[0];
+const color2 = colors[1];
+const color3 = colors[2];
+*/
+const [color1, color2, color3, color4] = ['red', 'green', 'blue'];
+colors[3] = 'pink';
+console.log(color1, color2, color3, color4);
+
+/*
+비구조화할당, 구조분해할당(Destructurig Assignment)
+- 객체나 배열의 기존 구조를 분해해서 각각의 값으로 재할당
+- 배열은 비구조화할당시 변수명 임의로 지정가능
+-객체는 무조건 property key 값으로 변수명 지정
+*/
+const student2 = {
+	name: '나나',
+	age: 22,
+	isFemale: false,
+};
+// const name = '홍길동';
+// 뽑아낼 때는 key 값으로 뽑아야 되지만 다시 다른값으로 변경처리 가능
+const { name: name1, age: age1, isFemale } = student2;
+console.log(name1);
+console.log(age1);
+console.log(isFemale);
