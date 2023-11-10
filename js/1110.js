@@ -36,3 +36,26 @@ const newColors2 = colors.map((data, index) => {
 
 console.log(newColors);
 console.log(newColors2);
+
+const today = ['aa', 'bb', 'cc', 'dd'];
+const everyday = today.map((data, index) => {
+	return index + data;
+});
+console.log(everyday);
+
+/*
+기존 참조형 자료는 (배열,객체)의 변수로 복사시 원복복사가 안됌(shadow copy : 앝은복사)
+- 기존 배열을 단순히 변수에 옮겨 담을 시 
+*/
+
+//const colors = ['red', 'green', 'blue']; 휩메모리
+
+const newColors3 = colors; // 참조링크만 복사된것
+const newColors3_copy = [...colors];
+
+newColors3[0] = 'hotpink'; //복사링크의 원본도 바뀜(불변성유지 불가)
+newColors3.push('white');
+
+console.log('colors', colors);
+console.log('newColors3', newColors3);
+console.log('newColors3_copy', newColors3_copy);
